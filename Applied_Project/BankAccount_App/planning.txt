@@ -1,0 +1,32 @@
+What: Create an app that works like an online bank account
+Why 1: To apply what I learned with Object Oriented Programming (OOP) beyond the Calculator app
+Why 2: To practice designing systems to do things.
+Why 3: To build upon what I learned and stretch myself a bit.
+
+#====================================================================================================
+Design
+-----------------------------------------------------------------------------------------------------
+
+Think about how a bank account works. Take notes on that, and then map out the functionality.
+
+
+-----------------------------------------------------------------------------------------------------
+Entities
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Bank Account
+ - sub-type: Checking
+ - sub-type: Savings
+
+ - property/properties
+    - money/balance
+
+-----------------------------------------------------------------------------------------------------
+Behaviors
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Check_Balance()
+
+Deposit()
+
+Withdraw()
+
+Transfer()
