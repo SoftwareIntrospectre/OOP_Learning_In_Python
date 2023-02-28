@@ -1,0 +1,57 @@
+
+What: Create an Online Banking app that uses a Database to hold user information
+Why 1: To apply what I learned with Object Oriented Programming (OOP) beyond the BankAccount_App + use my database knowledge to expand the scope
+Why 2: To practice designing systems to do things.
+Why 3: To build upon what I learned and stretch myself a bit.
+
+#====================================================================================================
+Design
+-----------------------------------------------------------------------------------------------------
+
+Think about how a bank account works. Take notes on that, and then map out the functionality.
+
+
+-----------------------------------------------------------------------------------------------------
+Entities
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+--=====================================================================================================
+1. Bank Account
+------------------------------------------------------------------------------------------------------
+ - sub-type: Checking
+ - sub-type: Savings
+
+ - property/properties
+    - money/balance
+
+-----------------------------------------------------------------------------------------------------
+Behaviors
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Check_Balance()
+    - check if there's an account first
+    - print(balance)
+
+Deposit()
+    - balance += deposit amount
+    - cannot be a negative deposit
+    - cannot be a zero deposit
+    - done from outside bank account
+
+Withdraw()
+    - balance -= withdraw amount
+    - withdrawl cannot be > balance amount
+    - done from outside bank account 
+    
+Transfer()
+    - check to see if there's more than 1 account
+    - do variations of Deposit() and Withdraw(), except between two accounts
+
+--=====================================================================================================
+User
+    - think about what makes a user. Think about how these connect.
+-------------------------------------------------------------------------------------------------------
+
+--=====================================================================================================
+- Database
+    - think about the database design. PKs? FKs? Unique records
+
+-------------------------------------------------------------------------------------------------------
