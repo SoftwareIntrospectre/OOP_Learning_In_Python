@@ -24,9 +24,20 @@ Bank Account
 Behaviors
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 Check_Balance()
+    - check if there's an account first
+    - print(balance)
 
 Deposit()
+    - balance += deposit amount
+    - cannot be a negative deposit
+    - cannot be a zero deposit
+    - done from outside bank account
 
 Withdraw()
-
+    - balance -= withdraw amount
+    - withdrawl cannot be > balance amount
+    - done from outside bank account 
+    
 Transfer()
+    - check to see if there's more than 1 account
+    - do variations of Deposit() and Withdraw(), except between two accounts
