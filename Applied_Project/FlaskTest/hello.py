@@ -1,5 +1,6 @@
 from flask import Flask
 from markupsafe import escape
+from flask import url_for
 
 app = Flask(__name__)
 
@@ -16,13 +17,13 @@ app = Flask(__name__)
 # def hello(name):
 #     return f"Hello, {escape(name)}!"
 
-@app.route('/')
-def index():
-    return 'Index Page'
+# @app.route('/')
+# def index():
+#     return 'Index Page'
 
-@app.route('/hello')
-def hello():
-    return 'Hello World'
+# @app.route('/hello')
+# def hello():
+#     return 'Hello World'
 
 @app.route('/user/<username>')
 def show_user_profile(username):
@@ -42,6 +43,30 @@ def show_subpath(subpath):
 
 '''
     Resume at: "Unique URLs / Redirection Behavior"
-
-    https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application
 '''
+
+# @app.route('/projects/')
+# def projects():
+#     return 'The project page'
+
+# @app.route('/about')
+# def about():
+#     return 'The about page'
+
+@app.route('/')
+def index():
+    return 'index'
+
+app.route('/login')
+def login():
+    return 'login'
+
+@app.route('/user/<username>')
+def profile(username):
+    return f'{username}\'s profile'
+
+with app.test_request_context():
+    print(url_for('index'))
+    # print(url_for('login'))
+    # print(url_for('login', next='/'))
+    print(url_for('profile', username='John Doe'))
